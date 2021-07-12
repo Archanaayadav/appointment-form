@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" media="screen and (max-width: 768px)" href="mobile.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <title>Customer Self Booking</title>
+</head>
+<body>
+
+  <header id="showcase"> 
+    <div class="showcase-content">  
+      <img class="logo" src="https://img.freepik.com/free-vector/healthy-life-logo_5417-13.jpg?size=626&ext=jpg" >          
+      <h1>Customer Self-booking  - Dr. Ashok</h1>         
+    </div>    
+  </header>
+
+  <section id="booking-form">
+    <div class="appointment">
+      <h2 class="heading">Make your Appointment <i class="far fa-calendar-check"></i></h2>
+      <p class="statement">If you are an existing customer, type your Phone Number to retrieve your details.</p>
+      <form class="fill-details" name="BookingForm" method="post" action="/SprHibStrt/Booking.do;jsessionid=A7BF77183604FE67BDD23B691854C9AE.worker1" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="name" class="required">Customer Phone:</label>
+          <input type="number" name="contact" id="contact" placeholder="Enter your contact number">
+          <input type="button" value="Check Customer" class="check btn btn-dark">
+        </div>
+        <div class="form-group">
+          <label for="name" class="required">Customer Name:</label>
+          <input type="text" name="name" id="name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+          <label for="address" class="required">Customer Address:</label>
+          <textarea name="address" id="address" placeholder="Enter your location" cols="50" rows="4" onkeydown="limitText(this.form.deliveryAddress,this.form.countdown1,200)" onkeyup="limitText(this.form.deliveryAddress,this.form.countdown1,200)"></textarea>
+          <p>(Maximum Characters:200)</p> <br>
+          <p> You have <input readonly type="text" name="countdown1" size="3" value="200" class="check"> characters left.</p>
+        </div>
+        <div class="form-group">
+          <label for="gender" class="required">Gender:</label>
+          <select id="gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="others">Others</option>
+          </select> 
+        </div>
+        <div class="form-group">
+          <label for="dob" class="required">Date of Birth:</label>
+          <input type="date" name="dob" id="dob">
+        </div>
+        <div class="form-group">
+          <label for="email" class="required">Email Id:</label>
+          <input type="email" name="email" id="email" placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+          <label for="time" class="required">Select Date and Time:</label>
+          <input type="datetime-local" name="time" id="time">
+        </div>
+        <div class="form-group">
+          <label for="test" class="required">Select Test:</label>
+          <select name="test" id="test" multiple="multiple" onchange="">  
+            <option value="2918">17 ALPHA-HYDROXY PROGESTERONE @ 1500</option>
+            <option value="2919">24 HR URINE CREATININE CLEARANCE @ 600</option>
+            <option value="2920">ABS. GRANULOCYTE COUNT @ 300</option>
+            <option value="2921">ABSOLUTE BASOPHIL COUNT @ 300</option>
+            <option value="2922">ABSOLUTE EOSINOPHIL COUNT @ 300</option>
+            <option value="2923">ABSOLUTE LEUCOCYTE COUNT @ 500</option>
+            <option value="2924">ABSOLUTE LYMPHOCYTE COUNT @ 300</option>
+            <option value="2925">ABSOLUTE MONOCYTE COUNT @ 300</option>
+            <option value="2926">ABSOLUTE NEUTROPHIL COUNT @ 300</option>
+            <option value="2927">ACETYLCHOLINE RECEPTOR ANTIBODIES @ 3000</option>
+            <option value="2928">ACID PHOSPHATASE (PROSTATIC) @ 350</option>
+            <option value="2929">ACTH ( ECLIA) @ 1800</option>
+            <option value="2930">ACTIVATED PROTEIN C RESISTANCE (FACTOR V LEIDEN), CITRATED BLOOD @ 6000</option>
+            <option value="2931">ACTIVE-B12 (HOLOTRANSCOBALAMIN) @ 2000</option>
+            <option value="2932">ACUTE VIRAL HEPATITIS PANEL @ 5500</option>
+            <option value="2933">ADENOSINE DEAMINASE (ENZYMATIC METHOD) @ 750</option>
+            <option value="2934">ADOPTION PROFILE @ 13500</option>
+            <option value="2935">ADVANCED SMART CHECK PROFILE (ADVANCE SMAC) @ 4750</option>
+            <option value="2936">ADVANCED SMART CHECK PROFILE RANDOM (ADVANCE SMAC) @ 4750</option>
+            <option value="2937">AFB SECOND LINE DRUG SENSITIVITY @ 15000</option>
+            <option value="2938">AFB SIRE PANEL DRUG SENSITIVITY @ 4000</option>
+            <option value="2939">AFP-TRIPLE TEST @ 750</option>
+            <option value="2940">ALBUMIN CREATININE RATIO (SPOT) @ 100</option>
+            <option value="2941">ALKALINE PHOSPHATASE @ 250</option>
+            <option value="2942">ALLERGY (SPECIFIC IGE)  IMMUNOCAP, SERUM (5 Allergen) @ 6000</option>
+            <option value="2943">ALLERGY (SPECIFIC IGE) IMMUNOCAP,  SERUM (3 Allergen) @ 4000</option>
+            <option value="2944">ALLERGY (SPECIFIC IGE) IMMUNOCAP, SERUM (1 Allergen) @ 1500</option>
+            <option value="2945">ALLERGY COMPREHENSIVE / EXTENTED PANEL, IMMUNOCAP, SERUM @ 19900</option>
+            <option value="2946">ALLERGY FOOD /  ECZEMA PANEL, IMMUNOCAP, SERUM @ 14900</option>
+            <option value="2947">ALLERGY RESPIRATORY / RHINITIS PANEL, IMMUNOCAP, SERUM @ 10900</option>
+            <option value="2948">ALLERGY SCREENING (PHADIATOP), SERUM @ 1500</option>
+            <option value="2949">ALLERGY SCREENING PANEL @ 2600</option>
+            <option value="2950">ALPHA FETO PROTEIN (PRE NATAL) [ECLIA] @ 700</option>
+            <option value="2951">ALPHA FETO PROTEIN (TUMOUR MARKER) @ 950</option>
+            <option value="2952">ALPHA FETO PROTEIN [AMNIOTIC FLUID] @ 950</option>
+            <option value="2953">AMOEBIC SEROLOGY (IgG ANTIBODIES TO E. HISTOLYTICA) @ 1400</option>
+            <option value="2954">AMYLASE FLUID @ 500</option>
+            <option value="2955">ANDROSTENEDIONE @ 1900</option>
+            <option value="2956">ANGIOTENSIN CONVERTING ENZYME (ACE) @ 1300</option>
+            <option value="2957">ANTENATAL HEALTH PROFILE @ 4000</option>
+            <option value="2958">ANTI - DS DNA  ANTIBODY, SERUM @ 1200</option>
+            <option value="2959">ANTI - HBS [CMIA] @ 900</option>
+            <option value="3428">SPARSH FEVER PANEL @ 1050</option>
+            <option value="3429">SPARSH GENERAL WELLNESS PANEL @ 6900</option>
+            <option value="3430">SPOT MICROALBUMIN CREATININE RATIO @ 700</option>
+            <option value="3431">SPUTUM CULTURE AND SENSITIVITY @ 850</option>
+            <option value="3432">SPUTUM FOR AFB (Z-N STAIN) @ 500</option>
+            <option value="3433">SPUTUM FOR PNEUMOCYSTIS @ 500</option>
+            <option value="3434">SPUTUM GRAM STAIN EXAMINATION @ 400</option>
+            <option value="3435">STD PROFILE @ 8700</option>
+            <option value="3436">STD PROFILE 1 @ 3700</option>
+            <option value="3437">STD PROFILE 2 @ 8500</option>
+            <option value="3438">STOOL CULTURE AND SENSITIVITY @ 850</option>
+            <option value="3439">STOOL EXAMINATION (OCCULT BLOOD) @ 300</option>
+            <option value="3440">STOOL EXAMINATION (ROUTINE) @ 300</option>
+            <option value="3441">STOOL FOR REDUCING SUBSTANCES @ 300</option>
+            <option value="3442">STOOL HANGING DROP PREPARATION FOR V CHOLERAE @ 500</option>
+            <option value="3443">SUPERIOR SMART CHECK (SUPERIOR SMAC) @ 8600</option>
+            <option value="3444">SUPERIOR SMART CHECK RANDOM (SUPERIOR SMAC) @ 8600</option>
+            <option value="3445">SYPHILIS (CMIA) @ 1200</option>
+            <option value="3446">T.S.H.(PTHY1) @ 450</option>
+            <option value="3447">T.S.H.[ULTRASENSITIVE] @ 450</option>
+            <option value="3448">TACROLIMUS @ 4500</option>
+            <option value="3449">TAENIA SOLIUM (CYSTICERCOSIS) @ 2200</option>
+            <option value="3450">TEST FOR CRYOGLOBULINS (SCREENING TEST) @ 200</option>
+            <option value="3451">TESTOSTERONE CORTISOL RATIO @ 1700</option>
+            <option value="3452">TESTOSTERONE FREE @ 1900</option>
+            <option value="3486">URINARY SUGAR (24 HRS.) @ 100</option>
+            <option value="3487">URINARY UREA @ 300</option>
+            <option value="3488">URINE BENCE-JONES PROTEINS @ 600</option>
+            <option value="3489">URINE CALCIUM @ 400</option>
+            <option value="3490">URINE CHLORIDE @ 300</option>
+            <option value="3491">URINE CULTURE AND SENSITIVITY @ 850</option>
+            <option value="3492">URINE EXAMINATION ( ROUTINE) @ 200</option>
+            <option value="3493">URINE FOR ALBUMIN @ 150</option>
+            <option value="3494">URINE FOR KETONES @ 200</option>
+            <option value="3495">URINE IMMUNOFIXATION ELECTROPHORESIS @ 5000</option>
+            <option value="3496">URINE METABOLIC SCREENING @ 800</option>
+            <option value="3497">URINE PHOSPHORUS EXCRETION @ 300</option>
+            <option value="3498">URINE PORPHYRINS @ 600</option>
+            <option value="3499">URINE POTASSIUM @ 300</option>
+            <option value="3500">URINE PROTEIN @ 400</option>
+            <option value="3501">URINE PROTEIN / CREATININE RATIO (24 HOURS) @ 600</option>
+            <option value="3502">URINE PROTEIN ELECTROPHORESIS (URINE CONCENTRATED 100 X) @ 3500</option>
+            <option value="3503">URINE QUANT. EXAM. PROTEINS @ 500</option>
+            <option value="3504">URINE SODIUM @ 300</option>
+            <option value="3505">URINE STRIP TEST @ 200</option>
+            <option value="3506">URINE SUGAR (FASTING) @ 100</option>
+            <option value="3507">URINE SUGAR (POST-PRANDIAL) @ 100</option>
+            <option value="3508">URINE SUGAR-RANDOM @ 100</option>
+            <option value="3509">URINE URIC ACID @ 300</option>
+            <option value="3510">V/M PROFILE @ 3500</option>
+            <option value="3511">VAGINAL SWAB CULTURE AND SENSITIVITY @ 850</option>
+            <option value="3512">VAGINAL SWAB GRAM STAIN @ 400</option>
+            <option value="3513">VALPROIC ACID @ 900</option>
+            <option value="3514">VASCULITIS PANEL @ 4000</option>
+            <option value="3515">VISIT 01 @ 300</option>
+            <option value="3516">VISIT 04 @ 300</option>
+            <option value="3517">VITAMIN D  PANEL @ 3000</option>
+            <option value="3518">VITAMIN D PANEL @ 3000</option>
+            <option value="3519">VITAMIN D STUDY AIIMS @ 1000</option>
+            <option value="3520">VITAMIN D STUDY SEHEAC @ 1600</option>
+            <option value="3521">VITAMIN MINERAL AND  ANEMIA 1 PROFILE @ 7400</option>
+            <option value="3522">VITAMIN MINERAL AND  ANEMIA 2 PROFILE @ 8500</option>
+            <option value="3523">VITAMINS AND MINERALS PROFILE @ 6500</option>
+            <option value="3524">WATER STERILITY TEST @ 1500</option>
+            <option value="3525">WEIGHT IMBALANCE PANEL @ 16900</option>
+            <option value="3526">WIDAL TEST (TUBE METHOD) @ 500</option>
+            <option value="3527">WOUND SWAB CULTURE AND SENSITIVITY @ 850</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="comments">Comments:</label>
+          <textarea name="comments" id="comments" cols="30" rows="6" placeholder="Enter your comments"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="prescrition">Upload your prescriptions:</label>
+            <input type="file" name="prescription" id="prescrition" accept=".pdf, .jpg, .jpeg" size="50" value=""> 
+            <input type="file" name="prescription" id="prescrition" accept=".pdf, .jpg, .jpeg" size="50" value=""> 
+            <input type="file" name="prescription" id="prescrition" accept=".pdf, .jpg, .jpeg" size="50" value="">
+            <p class="statement space">File must be less than 2mb each.</p> 
+        </div>
+        <input type="submit" value="Clear" class="btn">
+        <input type="submit" value="Book Appointment" class="btn btn-dark">
+      </form>
+      
+    </div>
+  </section>
+</body>
+</html>

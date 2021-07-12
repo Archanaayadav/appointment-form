@@ -1,0 +1,136 @@
+:root{
+  --bg-color: #444;
+  --primary-color: #333;
+  --secondary-color: #f4f4f4;
+  --text-size: 20px;
+  --py-1: 10px;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Roboto Slab', serif;;
+}
+
+img{
+  height: 70px;
+  width: 80px;
+  border-radius: 50%;
+}
+
+/* Utility Classes */
+
+.btn{
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  text-decoration: none;
+  border: none;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in;
+}
+
+.btn:hover, .btn-dark{
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.btn-dark:hover{
+  background: var(--secondary-color);
+  color: #333;
+}
+
+.heading{
+  color: var(--primary-color);
+  font-size: 30px;
+}
+
+/* Header showcase */
+#showcase{
+  background: var(--bg-color);
+  color: #fff;
+  height: 16vh;
+  position: relative;
+}
+
+#showcase .showcase-content{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-top: var(--py-1);
+}
+
+
+/* Form */
+
+#booking-form{
+  background: #93cb52;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#booking-form .appointment{
+  text-align: center;
+  border: 2px black solid;
+  padding: 50px;
+  margin: 20px;
+}
+
+#booking-form .appointment .form-group{
+  margin-bottom: 20px;
+}
+
+#booking-form .appointment .form-group label{
+  display: block;
+  text-align: left;
+  font-size: var(--text-size);
+  margin-bottom: 5px;
+}
+
+#booking-form .appointment .form-group input,
+#booking-form .appointment .form-group textarea,
+#booking-form .appointment .form-group select {
+  width: 100%;
+  padding: 0.5rem;
+}  
+
+#booking-form .appointment .form-group .check{
+  width: 150px;
+}
+ 
+#booking-form .appointment p{
+  font-size: var(--text-size);
+}
+
+#booking-form .appointment .statement {
+  color: blue;
+  padding-top: var(--py-1);
+  padding-bottom: 30px;
+  
+}
+
+
+#booking-form .appointment .space{
+  padding-bottom: 0;
+}
+/* input[type='button']{
+  width: 40px;  
+} */
+
+.required:after{
+  content: '*';
+  color: red;
+  padding-left: 2px;
+}
